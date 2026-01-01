@@ -1,19 +1,17 @@
 #include <iostream>
 #include <cstdlib>
-#include "./src/admin/admin.cpp"
-#include "./src/utils/screen.cpp"
+#include "src/menu/menu.h"
 
 using namespace std;
 
 // ================= MAIN FUNCTION =================
 int main()
 {
-    Admin admin;
-    int choice;
-    Screen::clearScreen();
-    cout << "╔════════════════════════════════════════╗\n";
-    cout << "║     REAL ESTATE MANAGEMENT SYSTEM      ║\n";
-    cout << "╚════════════════════════════════════════╝\n";
+  cout << "╔════════════════════════════════════════╗\n";
+  cout << "║     REAL ESTATE MANAGEMENT SYSTEM      ║\n";
+  cout << "╚════════════════════════════════════════╝\n";
 
-      return 0;
+  Menu::menu();
+
+  return 0;
 }

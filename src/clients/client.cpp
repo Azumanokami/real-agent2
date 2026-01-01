@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include "./src/utils/user.cpp"
+#include "../utils/user.h"
 using namespace std;
 
 class Client : public User
@@ -17,4 +17,27 @@ public:
         cout << "2. View Client\n";
         cout << "3. Back to Main Menu\n";
     }
+
+    void enterDetails()
+    {
+        cout << "Enter Client Name: ";
+        getline(cin, name);
+        cout << "Enter Client Address: ";
+        getline(cin, address);
+        cout << "Enter Client Phone: ";
+        getline(cin, phone);
+        cout << "Enter Client Email: ";
+        getline(cin, email);
+    }
+
+    void viewDetails()
+    {
+        cout << "\nClient Details:\n";
+        cout << "Name: " << name << "\n";
+        cout << "Address: " << address << "\n";
+        cout << "Phone: " << phone << "\n";
+        cout << "Email: " << email << "\n";
+    }
+
+    ~Client() {}
 };

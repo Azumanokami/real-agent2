@@ -1,0 +1,12 @@
+#include "../utils/user.h"
+#pragma once
+
+class Client : public User
+{
+
+public:
+    void menu();
+    void enterDetails();
+    void viewDetails();
+    ~Client() {}
+};

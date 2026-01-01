@@ -1,13 +1,12 @@
 #include <iostream>
 #include <cstdlib>
 #include <stdio.h>
-#include "./src/admin/admin.h"
-
-using namespace std;
+#include "../admin/admin.h"
+#include "menu.h"
 
 namespace Menu
 {
-    void menu()
+    int menu()
     {
         int choice;
         Admin admin;
@@ -15,32 +14,32 @@ namespace Menu
         // Login validation
         while (!admin.login())
         {
-            cout << "Invalid login! Try again.\n";
+            std::cout << "Invalid login! Try again.\n";
         }
 
-        cout << "Login successful!\n";
+        std::cout << "Login successful!\n";
 
         do
         {
-            cout << "\n----- MAIN MENU -----\n";
-            cout << "1. Property Menu\n";
-            cout << "2. Seller Menu\n";
-            cout << "3. Client Menu\n";
-            cout << "4. Logout\n";
-            cout << "Enter choice: ";
-            cin >> choice;
+            std::cout << "\n----- MAIN MENU -----\n";
+            std::cout << "1. Property Menu\n";
+            std::cout << "2. Seller Menu\n";
+            std::cout << "3. Client Menu\n";
+            std::cout << "4. Logout\n";
+            std::cout << "Enter choice: ";
+            std::cin >> choice;
 
             // User *user; // Base class pointer (Polymorphism)
 
             switch (choice)
             {
-            case 1:
-            {
-                Property p;
-                user = &p;
-                user->menu();
-                break;
-            }
+            // case 1:
+            // {
+            //     Property p;
+            //     user = &p;
+            //     user->menu();
+            //     break;
+            // }
             // Disable for now
             //  case 2:
             //  {
@@ -57,12 +56,12 @@ namespace Menu
             //      break;
             //  }
             case 4:
-                cout << "Logged out successfully.\n";
-                cout << "Program ended.\n";
+                std::cout << "Logged out successfully.\n";
+                std::cout << "Program ended.\n";
                 return 0;
 
             default:
-                cout << "Invalid choice!\n";
+                std::cout << "Invalid choice!\n";
             }
 
         } while (true);

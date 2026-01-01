@@ -1,34 +1,27 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include "admin.h"
+
 using namespace std;
 
-class Admin
+Admin::Admin()
 {
-private:
-    string username;
-    string password;
+    username = "admin";
+    password = "1234";
+}
 
-public:
-    Admin()
-    {
-        username = "admin";
-        password = "1234";
-    }
-
-    bool login()
-    {
-        string u, p;
-        cout << "\n--- Admin Login ---\n";
-        system("cls");
-        cout << "Username: ";
-        cin >> u;
-        cout << "Password: ";
-        cin >> p;
-
-        if (u == username && p == password)
-            return true;
-        else
-            return false;
-    }
-};
+bool Admin::login()
+{
+    string u, p;
+    cout << "\n--- Admin Login ---\n";
+    system("cls");
+    cout << "Username: ";
+    cin >> u;
+    cout << "Password: ";
+    cin >> p;
+    if (u == username && p == password)
+        return true;
+    else
+        return false;
+}

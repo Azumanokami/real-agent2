@@ -10,7 +10,7 @@ int main()
 {
   Screen::printHeader("REAL ESTATE MANAGEMENT SYSTEM");
 
-  Menu::menu();
+  Menu::runMenu();
 
   return 0;
 }

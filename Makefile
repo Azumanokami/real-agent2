@@ -10,6 +10,7 @@ SRCS = main.cpp \
        src/clients/client.cpp \
 	   src/property/property.cpp \
        src/menu/menu.cpp \
+       src/utils/files/file.cpp \
        src/utils/screen/screen.cpp \
        src/utils/user/user.cpp
 

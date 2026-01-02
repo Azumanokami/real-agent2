@@ -1,2 +1,9 @@
 build/
 **/build/
+**/build/**
+
+*.txt
+*.o
+**/outDebug/**
+*.log
+*.log.*

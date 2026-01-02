@@ -10,9 +10,8 @@ using namespace std;
 
 namespace Menu
 {
-    int menu()
+    void runMenu()
     {
-        int choice;
         Admin admin;
 
         // Login validation
@@ -25,6 +24,12 @@ namespace Menu
 
         Screen::clearScreen();
 
+        showMenu();
+    }
+
+    int showMenu()
+    {
+        int choice;
         do
         {
             cout << "\n----- MAIN MENU -----\n";
